@@ -1,0 +1,41 @@
+-->初始化
+ 01.登录事件
+ 	Login.auth();	实现登录监听
+ 
+ 02.首页开启后初始化事件（账单录入）
+ 	InputBill.getTown_dec();	初始化城镇字典
+ 	InputBill.getSafeType_dec();	初始化参保类型字典
+ 	InputBill.getHelpType_dec();	初始化救助类型字典
+ 	
+ 03.点击历史查询初始化事件
+ 	HistoryBill
+ 		getBillData 搜索类型 搜索数据 年 月
+ 		getSumBill	获得billData中单据数量
+ 		getSumPeople	获得billData中人数（身份证号重复不计）
+ 		getSumMoney		获得billData中救助金额的累加
+ 
+ 04.点击账号管理初始化时间
+ 	SetUser.getUserData();	获取用户信息
+ 	
+ 05.参数设置初始化事件
+ 	SetSystemData
+ 		getTown_dec；	获取城镇列表	InputBill.getTown_dec();
+ 		getSafeType_dec；获取参保类型	InputBill.getSafeType_dec();
+ 		getHelpType_dec 获取救助类型	InputBill.getHelpType_dec(); ！此事件获取两次
+ 		getHelpScale；	获取救助比例	InputBill.getHelpScale（）
+ 		getStartPay		获取起付线		InputBill.getStartPay（）
+ 		getEndPay		获取最高限		InputBill.getEndPay（）
+ 		getMoreUse		获取可多次使用	InputBill.getMoreUse
+ 		getPath1
+		getPath2
+ 		
+ 数据导出相关
+ 	导出个人数据printService.printBill
+ 	导出历史数据HistoryBill.outData
+ 			outPutService.outPutSelect
+ 	导出历史数据并删除HistoryBill.out_delHistoryData
+ 	
+ 	/////////////////////////////////////////////////////////////////////
+ 	
+ 		
+ 	
