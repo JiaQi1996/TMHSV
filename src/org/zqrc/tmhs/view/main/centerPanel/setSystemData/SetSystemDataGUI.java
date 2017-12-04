@@ -375,7 +375,7 @@ public class SetSystemDataGUI extends JPanel implements ActionListener{
 				helpScale_tf.setEnabled(false);
 				mainJPanel.setVisible(false);
 				DecimalFormat df=new DecimalFormat("#.00");
-				LadderScaleGUI lsg = new LadderScaleGUI(userName, (String)helpType_cb.getSelectedItem(),
+				LadderScaleGUI lsg = new LadderScaleGUI(userName, (String)setHelpType_cb.getSelectedItem(),
 						Double.parseDouble(df.format(set.getHelpScale((setHelpTypeTemp)))),
 						Double.parseDouble(startPay_tf.getText()),Double.parseDouble(endPay_tf.getText()),
 						(String) moreUse_cb.getSelectedItem(),LadderScale,mainJPanel,this);

@@ -291,7 +291,13 @@ public class LadderScaleGUI extends JPanel implements ActionListener,MouseListen
 		if(e.getSource()==submit){
 			double[][] newdata = arraryStringToDouble(getTableValue());
 			int message=0;
-			if(newdata.length == data.length){
+			int dataLength = 0;
+			try{
+				dataLength = data.length;
+			}catch(Exception err){
+				err.printStackTrace();
+			}
+			if(newdata.length == dataLength){
 				for(int i=0;i<data.length;i++){
 					if(Arrays.equals(data[i], newdata[i])){
 						message=1;
