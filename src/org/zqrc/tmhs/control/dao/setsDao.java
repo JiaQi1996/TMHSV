@@ -84,6 +84,7 @@ public class setsDao {
 		return true;
 	}
 
+	
 	public double findLastLadderScaleID() {
 		// TODO Auto-generated method stub
 		try{
@@ -101,8 +102,22 @@ public class setsDao {
 
 	public void insertLadderScale(double id,double[][] data) {
 		// TODO Auto-generated method stub
+		
 		try{
 			int lid = (int)id;
+			/**
+			 * 判断 是否第一个增加
+			 * JiaQi
+			 */
+			ResultSet rs = db.getRs("select * from ladderScale");
+			if(!rs.next()){
+				lid = 101;
+			}
+			rs.close();
+			db.closed();
+			/**
+			 * JiaQi
+			 */
 			String sql = "INSERT INTO ladderScale (id,start,end,scale) VALUES";
 			for(int i = 0;i<data.length;i++){
 				sql += " ('"+lid+"','"+data[i][0]+"','"+data[i][1]+"','"+data[i][2]+"')";

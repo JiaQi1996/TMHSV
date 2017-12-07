@@ -145,7 +145,7 @@ public class InputBill {
 		return ss.findByHelpType(helpType).getMoreUse();
 	}
 	//当救助比例大于100时，救助比例数值为阶梯ID值，获取阶梯比例值
-	public double[][] getLadderScale(String id) {
+	public double[][]getLadderScale(String id) {
 		// TODO Auto-generated method stub
 		double [][] ladderScale = ss.findLadderScale(id);//{{0,2000,10},{2000,3000,20},{3000,6000,50},{6000,-1,80}};
 		return ladderScale;
